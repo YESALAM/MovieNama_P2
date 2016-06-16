@@ -45,7 +45,7 @@ public class DBProvider extends ContentProvider {
                 result = database.query(DBEntry.TABLE_NAME,projection,DBEntry.COLUMN_ID+" =?",new String[]{uri.getLastPathSegment()},null,null,sortOrder);
                 break;
             default:
-                throw new UnsupportedOperationException("Didn't get it");
+                throw new UnsupportedOperationException("Something fishy there");
         }
         result.setNotificationUri(getContext().getContentResolver(),uri);
         return result;

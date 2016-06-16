@@ -62,11 +62,9 @@ public class MainActivity extends AppCompatActivity implements Callback<MovieRes
                 .build();
         tmdbAPi = retrofit.create(TmdbAPi.class) ;
 
-        Log.e("main ", BuildConfig.API) ;
         DisplayMetrics metrics = getResources().getDisplayMetrics();
         int width = metrics.widthPixels ;
         int dp = (width * 160)/ metrics.densityDpi ;
-        Log.e("Main"," dp is "+dp) ;
 
         if(savedInstanceState != null ){
             spinner.setSelection(savedInstanceState.getInt("choice"));

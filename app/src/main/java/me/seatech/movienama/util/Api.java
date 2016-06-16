@@ -11,5 +11,4 @@ public class Api {
     public static final String SIZE_W342 = "w342" ;
     public static final String YOU_TUBE_URL = "https://youtu.be/" ;
 
-
 }

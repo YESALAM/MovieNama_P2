@@ -43,7 +43,6 @@ public class MainFragment extends Fragment implements AdapterView.OnItemClickLis
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         isdualpane = isDualPane() ;
-        Log.e("MainFragment","dual pane "+isdualpane);
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

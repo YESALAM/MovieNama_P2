@@ -55,6 +55,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DetailFragment extends Fragment implements Callback<CommentResult>, View.OnClickListener {
 
 
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
     public static DetailFragment instance ;
 
     @Bind(R.id.title_tv)
@@ -87,7 +92,7 @@ public class DetailFragment extends Fragment implements Callback<CommentResult>,
         Bundle bundle = new Bundle() ;
         bundle.putParcelable("movie" , movie);
         this.setArguments(bundle);
-        if(bundle!= null) Log.e("DetailFragment","sets the arguments");
+        if(bundle!= null);
         return instance ;
     }
 
@@ -208,7 +213,6 @@ public class DetailFragment extends Fragment implements Callback<CommentResult>,
         if(result == null )
             Log.e("DetailFragment" , "CommentResult was null ") ;
         else{
-            Log.e("DetailFragment","onResponse of CommentResult") ;
             comments = (ArrayList<Comment>) response.body().getComments();
             loadComments();
         }
@@ -232,7 +236,7 @@ public class DetailFragment extends Fragment implements Callback<CommentResult>,
                 @Override
                 public void onResponse(Call<TrailerResult> call, Response<TrailerResult> response) {
                     TrailerResult result = response.body() ;
-                    if(result == null ) Log.e("DetailFragment " ," TrailerResult was null ");
+                    if(result == null ) ;
                     else{
                         Log.e("DetailFragment","onResponse of TrailerResult") ;
                         trailerList = (ArrayList<me.seatech.movienama.schemas.Trailer>) response.body().getTrailers();
@@ -316,7 +320,6 @@ public class DetailFragment extends Fragment implements Callback<CommentResult>,
     @Override
     public void onClick(View v) {
 
-        Log.e("DetailFragment","FAB clicked");
         ContentResolver contentResolver = getContext().getContentResolver() ;
         DB db = new DB(contentResolver) ;
         String toast_message ;
