@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MovieNama</string>
+
+    <string-array name="sorting_param">
+        <item>Popular</item>
+        <item>High Rating</item>
+        <item>Favourites</item>
+    </string-array>
+    <string name="title_activity_movie_detail">Movie Detail</string>
+</resources>
